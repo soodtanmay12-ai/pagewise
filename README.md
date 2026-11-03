@@ -1,6 +1,12 @@
-# Pagewise · Reading Room v6.3
+# Pagewise · Reading Room v6.4
 
 Pagewise is a local-first reading PWA for PDF books, book-wide journals, and Apple Pencil annotations. The application UI, CSS, JavaScript, and a developer-only handover are embedded in `index.html`. The PWA also needs its manifest, service worker, icons, and bundled PDF.js files.
+
+## New in 6.4
+
+- **iPad portrait reader**: the page slider, page count, Full page, and Mark controls reflow onto separate rows so they no longer collide.
+- **Book journal**: added a full-screen writing mode that hides the shelf and page-list chrome, enlarges the paper, and exits with Escape or the same control.
+- **Apple Pencil**: drawing no longer depends on finger mode when Safari reports a Pencil as a narrow, pressure-bearing touch pointer; drawing tools suppress page-panning gestures on the paper, and graphite strokes are darker.
 
 ## New in 6.2
 
