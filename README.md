@@ -1,6 +1,23 @@
-# Pagewise · Reading Room v6.6
+# Pagewise · Reading Room v6.9.1
 
 Pagewise is a local-first reading PWA for PDF books, book-wide journals, and Apple Pencil annotations. The application UI, CSS, JavaScript, and a developer-only handover are embedded in `index.html`. The PWA also needs its manifest, service worker, icons, and bundled PDF.js files.
+
+## New in 6.9.1
+
+- **Progress saves reliably**: a failed save is retried (including after iPad Safari drops its storage connection), a cover problem can no longer stop reading progress from saving, and the message now names the error.
+- **Covers stay**: a new book keeps its cover after reload, a one-off display glitch no longer erases a saved cover, and any missing cover is rebuilt from the book's first page when the app starts.
+
+## New in 6.9
+
+- **Pointer tool**: show your place without marking the page, in journals and when marking up a book. Choose **Trail** (a continuous line that fades behind the pen) or **Dot** (a plain dot that follows the pen). Pick its colour with the swatches and its size with the slider; nothing is saved to the page.
+
+## New in 6.8
+
+- **Self-healing covers**: a cover is checked when it is made, and if one ever fails to display, Pagewise drops it and quietly rebuilds it from the book's first page.
+
+## New in 6.7
+
+- **Book covers stay**: the cover is now saved as plain image text instead of a binary file, so it no longer disappears after the first reload on iPad. Covers saved by earlier versions are converted automatically; one that cannot be recovered is rebuilt the next time you open that book.
 
 ## New in 6.6
 
