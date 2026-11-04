@@ -1,6 +1,28 @@
-# Pagewise · Reading Room v6.4
+# Pagewise · Reading Room v6.6
 
 Pagewise is a local-first reading PWA for PDF books, book-wide journals, and Apple Pencil annotations. The application UI, CSS, JavaScript, and a developer-only handover are embedded in `index.html`. The PWA also needs its manifest, service worker, icons, and bundled PDF.js files.
+
+## New in 6.6
+
+- **No flash between pages**: each page is prepared off-screen and swapped in at once, so the previous page stays until the next one is ready (most noticeable in night mode and on image-heavy books).
+- **Instant page turns**: the next page is prepared in the background while you read, and recent pages are kept, so turning forward or back is immediate.
+- **Calmer layout changes**: rotating the iPad re-renders the page once; small changes such as Safari's toolbar collapsing no longer redraw it.
+- **Faster repeat search**: the first search in a book reads its text once; later searches are near-instant.
+- **Lighter opening of large PDFs**: the file is no longer duplicated in memory while it opens.
+- **Keyboard**: Home and End jump to the first and last page; the slider shows the percent while you drag.
+
+Testing for 6.6 used headless Chromium with a 300-page synthetic book. Please validate feel on your iPad.
+
+## New in 6.5
+
+- **Smoother pen**: journal writing now uses every Pencil sample the iPad reports, predicts the pen tip, paints once per frame, and keeps finished ink in a cached layer so a full page no longer slows writing down. Saving waits for a pause instead of running after every stroke.
+- **Pencil**: the pencil nib is a continuous graphite line again (it had rendered as a faint dotted trail). Reader marks share it.
+- **Journal full screen** now works, and also asks the browser to hide its own chrome. Escape or the same button exits.
+- **Reader footer**: Full page and Mark no longer overlap the next-page arrow on iPad portrait or smaller landscape widths.
+- **Journal usability**: undo and redo dim when there is nothing to do; Next becomes "New page +" on the last page (and rests on an empty last page); the placeholder hides once the page has content; on iPad portrait the page strip sits under a wider paper; turning Finger off no longer lets the page scroll under the Pencil; rotating the iPad or entering full screen keeps unsaved strokes.
+- **Pencil quick switch**: apps on the web cannot receive the Apple Pencil's own double-tap, so tap twice with a finger of your other hand while you write to switch between eraser and your tool (or choose previous tool, undo, or off). A two-finger tap undoes. Both are customisable in Settings, work in journals and page marks, and E on a keyboard does the same eraser toggle.
+
+Testing for 6.5 used headless Chromium with a synthetic PDF and synthetic pen events at iPad, phone and landscape sizes. Please validate feel on your iPad with Apple Pencil.
 
 ## New in 6.4
 
