@@ -1,6 +1,11 @@
-# Pagewise · Reading Room v6.9.1
+# Pagewise · Reading Room v6.9.2
 
 Pagewise is a local-first reading PWA for PDF books, book-wide journals, and Apple Pencil annotations. The application UI, CSS, JavaScript, and a developer-only handover are embedded in `index.html`. The PWA also needs its manifest, service worker, icons, and bundled PDF.js files.
+
+## New in 6.9.2
+
+- **Pointer trail**: now one smooth, continuous ribbon that tapers to a point (it was drawn in pieces and looked like a railway track).
+- **Full page + Mark together**: turn on Full page and keep marking. The tools dock stays; tap **Hide tools** to give the page the whole screen and **Tools** to bring it back. Pointer, Highlighter and pen all work in Full page.
 
 ## New in 6.9.1
 
