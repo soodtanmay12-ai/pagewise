@@ -1,0 +1,4 @@
+lexicon-extra.txt.gz combines:
+- Wordset dictionary (https://github.com/wordset/wordset-dictionary), CC BY-SA 4.0. This file is an adaptation (shortened, reformatted) shared under the same licence.
+- Webster's Unabridged Dictionary, 1913 (public domain), via github.com/matthewreagan/WebstersEnglishDictionary; first definitions shortened.
+- Irregular-form lists from the Princeton WordNet 3.0 exception files (see WORDNET-LICENSE.txt).

@@ -1,6 +1,54 @@
-# Pagewise · Reading Room v6.9.2
+# Pagewise · Reading Room v7.3.1
 
 Pagewise is a local-first reading PWA for PDF books, book-wide journals, and Apple Pencil annotations. The application UI, CSS, JavaScript, and a developer-only handover are embedded in `index.html`. The PWA also needs its manifest, service worker, icons, and bundled PDF.js files.
+
+## New in 7.3.1
+
+- Fixed: Meaning now uses the sentence to pick the best sense (7.3.0 shipped with this step disconnected). It says "Best guess" and opens Other meanings when the evidence is weak.
+
+## New in 7.3.0
+
+- **Much bigger dictionary** (offline): WordNet 3.0 plus about 125,000 extra headwords and senses from Wordset (modern and literary words, CC BY-SA 4.0) and Webster's 1913 (archaic and literary, public domain), plus irregular forms (ran, children, bought) and archaic words (thee, doth, hitherto). See `vendor/dict/EXTRA-LICENSE.txt`.
+- **Meaning that fits the sentence**: Meaning now reads the sentence around the word and shows the sense that fits best (word-overlap, part-of-speech cue and sense order), then Other meanings. This is a heuristic, so it says "Best guess" when unsure.
+- **Explain (optional, off by default)**: in Settings, add your own Anthropic API key. Tap Explain in the Meaning box for what the word means in this sentence and a plain-English reading of the sentence. Only that sentence and the book title go to Anthropic, only when you tap Explain. The key stays on this device and is not in backups. Without it, everything else works offline.
+
+## New in 7.2.1
+
+- **Instant meaning**: select a word and tap **Meaning** for a small box with the dictionary definition right by the word, so you keep the thread of the text. Looking up saves nothing. Tap **Catch** in the box (or the chip) if you want the word for later review. **More** opens the full dictionary.
+
+## New in 7.2
+
+- **Word Catcher**: turn on word selection, select a word while reading and tap **Catch**. It saves the word, its sentence and the page, and nothing opens mid-page.
+- **Built-in dictionary** (WordNet 3.0, works offline). After the session, define each word in your own words first, then check the dictionary. Greek and Latin root chips suggest a link.
+- **Review** shows the sentence with the word blanked out, on the existing 1/3/7/14-day schedule. **Use one word a day**: say it or write it.
+- **Calm limits**: up to 3 new words a day. Extra words wait quietly for tomorrow, with no counters.
+- Word bank, dictionary lookup (Quick find: type any word), and words survive removing a book. They are included in backups.
+- WordNet licence: `vendor/dict/WORDNET-LICENSE.txt`.
+
+## New in 7.1
+
+- **More refined elements**: a fine paper-grain texture, a gradient brand mark and buttons, a segmented library filter, custom checkboxes and dropdown arrows, lit book covers, richer progress bars and keycaps.
+- **Sidebar backup status**: the privacy card now shows when you last confirmed a backup and turns amber when it is missing or over a week old. Tap it to export or open Settings.
+- **Smarter Quick find**: with nothing typed, it suggests what to do next (continue your core book, resurface due ideas, back up).
+- **Time-aware Today greeting** and a **Library hero that takes its tint from your core book's cover**.
+
+## New in 7.0
+
+- **Premium polish across the whole app**: sentence-case labels instead of tracked capitals, larger and more legible small text, one consistent radius and shadow system, a cleaner sidebar with a clear active marker, roomier 40-46px touch targets, library cards where the full title sits above the progress bar, settings controls that no longer truncate, a quieter focus ring, and reduced-motion support. Light and dark themes both updated. No behaviour changes.
+- Removed a stray dark frame that appeared around the page after switching views.
+
+## New in 6.9.5
+
+- **Nothing left on screen when tools are hidden**: the small Tools pill is gone. In Full page with Mark on, tap **Hide tools** in the panel; **tap the page with three fingers** to bring the tools back (or press **T** on a keyboard). Three fingers again hides them. Two-finger tap (undo) and finger double-tap (eraser) work as before.
+
+## New in 6.9.4
+
+- **Cleaner Today page**: one clear column on iPad and phone (two on wide screens), a proper Next up card, even spacing between cards, the reading tip right under it, Feelings and Social side by side, and a full-width 12-week activity grid.
+
+## New in 6.9.3
+
+- **Pointer trail**: a thinner, cleaner line with a softer, lighter glow.
+- **Hide tools**: in Full page with Mark on, a **Hide tools** button sits in the tools panel. After hiding, tap **Tools** at the bottom to bring the panel back.
 
 ## New in 6.9.2
 
