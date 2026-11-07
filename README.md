@@ -1,6 +1,31 @@
-# Pagewise · Reading Room v7.3.1
+# Pagewise · Reading Room v7.3.7
 
 Pagewise is a local-first reading PWA for PDF books, book-wide journals, and Apple Pencil annotations. The application UI, CSS, JavaScript, and a developer-only handover are embedded in `index.html`. The PWA also needs its manifest, service worker, icons, and bundled PDF.js files.
+
+## New in 7.3.7
+
+- **Manual update button.** Settings & backup now has an **App update** row. **Check for update** asks the browser for a new version right now, downloads it, installs it and reloads Pagewise. It no longer waits for the next launch. If it says you are up to date but you just published a change, use **Force reload**: it clears only Pagewise's offline app copy and its service worker, then reloads from the network. Your books, notes and marks are not touched. Both need a connection. For either to see a release, `sw.js` must change in that release (its `VERSION` is bumped).
+- **Working `sw.js` restored.** The 7.3.5 and 7.3.6 packages shipped `sw.js` as an empty file, so the app had no offline cache and could never detect an update. 7.3.7 includes a complete one. Upload it with the rest.
+
+## New in 7.3.6
+
+- **Dictionary now works in Mark mode.** While marking, your pen sits on top of the page text, so words could not be selected. There is now a **Define** tool in the mark dock: tap any word and the Meaning popup opens, fitted to its sentence, with Catch available. With Finger drawing off, you can also long-press a word with your finger while any tool is active. This works even when Selectable text is off. Drawing, highlighting and the pointer are unchanged.
+
+## New in 7.3.5
+
+- **Frosted-glass finish, visual only.** Surfaces that float over the page now share one glass treatment: frosted blur, a hairline edge and a thin top highlight. That covers the reader header and footer, the Reading comfort and notes panels, the word popup and its chips, toasts and dialogs. The tool dock is a lighter raised pane on the frosted footer, buttons gain a fine highlight edge, and Mark gets a soft sheen. Nothing moved or resized. It falls back to near-opaque surfaces if blur is unavailable or Reduce Transparency is on. To revert, delete the `<style id="glass-layer">` block in `index.html`.
+
+## New in 7.3.4
+
+- **Pointer trail rebuilt on the GoodNotes model.** GoodNotes' Trail is a smooth glowing line that stays glued to the pen tip, follows the exact path you moved, and shrinks away from the tail after about a second. Ours now does the same: the line passes through your real pen samples (before, it cut corners), uses each sample's real timing, tapers smoothly instead of in steps, and the predicted lead is clamped so it cannot swing off the path. Headless test: centerline within the line's own half-width of the true path, sharp corners hit exactly, about 0.6 ms per frame.
+
+## New in 7.3.3
+
+- **Pointer latency fixed.** The laser trail did far too much work per frame (re-measuring the page on every pointer event, about 84 stroked segments and three large composites per frame). It now caches geometry, draws far less, and uses Apple Pencil prediction so the dot leads the pen. In a headless Chromium test at 2x resolution, per-frame cost fell from about 67 ms to about 1 ms. Real iPad feel still needs your check.
+
+## New in 7.3.2
+
+- Fixed: with a pen, highlighter or pointer chosen and the tools hidden, you could not turn the page. Two small arrows now appear at the screen edges in that state (swipe and edge taps stay off while writing so they cannot cause stray page turns).
 
 ## New in 7.3.1
 
@@ -127,7 +152,7 @@ All v6.0 testing used headless Chromium with a synthetic PDF. Please validate on
 3. Open the HTTPS site in Safari on iPad, then choose **Share → Add to Home Screen**.
 4. Import PDFs from Files. Pagewise stores data in that browser on that device.
 
-The service worker caches the app shell and local PDF.js files after the first online load. Updates wait for your choice; activating one reloads open Pagewise tabs together so the PDF.js library and worker stay paired. HTTPS is required for installation and offline support.
+The service worker caches the app shell and local PDF.js files after the first online load. Updates wait for your choice (Settings & backup > App update > Check for update); activating one reloads open Pagewise tabs together so the PDF.js library and worker stay paired. HTTPS is required for installation and offline support.
 
 ## Reading and journals
 

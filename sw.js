@@ -1,7 +1,90 @@
-const CACHE='pagewise-reading-room-7.3.1';
-const SHELL=['./','./index.html','./manifest.webmanifest','./icons/icon.svg','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png','./icons/icon-maskable-192.png','./icons/icon-maskable-512.png'];
-const VENDOR=["./vendor/pdfjs/pdf.mjs","./vendor/pdfjs/pdf.worker.mjs","./vendor/pdfjs/cmaps/78-EUC-H.bcmap","./vendor/pdfjs/cmaps/78-EUC-V.bcmap","./vendor/pdfjs/cmaps/78-H.bcmap","./vendor/pdfjs/cmaps/78-RKSJ-H.bcmap","./vendor/pdfjs/cmaps/78-RKSJ-V.bcmap","./vendor/pdfjs/cmaps/78-V.bcmap","./vendor/pdfjs/cmaps/78ms-RKSJ-H.bcmap","./vendor/pdfjs/cmaps/78ms-RKSJ-V.bcmap","./vendor/pdfjs/cmaps/83pv-RKSJ-H.bcmap","./vendor/pdfjs/cmaps/90ms-RKSJ-H.bcmap","./vendor/pdfjs/cmaps/90ms-RKSJ-V.bcmap","./vendor/pdfjs/cmaps/90msp-RKSJ-H.bcmap","./vendor/pdfjs/cmaps/90msp-RKSJ-V.bcmap","./vendor/pdfjs/cmaps/90pv-RKSJ-H.bcmap","./vendor/pdfjs/cmaps/90pv-RKSJ-V.bcmap","./vendor/pdfjs/cmaps/Add-H.bcmap","./vendor/pdfjs/cmaps/Add-RKSJ-H.bcmap","./vendor/pdfjs/cmaps/Add-RKSJ-V.bcmap","./vendor/pdfjs/cmaps/Add-V.bcmap","./vendor/pdfjs/cmaps/Adobe-CNS1-0.bcmap","./vendor/pdfjs/cmaps/Adobe-CNS1-1.bcmap","./vendor/pdfjs/cmaps/Adobe-CNS1-2.bcmap","./vendor/pdfjs/cmaps/Adobe-CNS1-3.bcmap","./vendor/pdfjs/cmaps/Adobe-CNS1-4.bcmap","./vendor/pdfjs/cmaps/Adobe-CNS1-5.bcmap","./vendor/pdfjs/cmaps/Adobe-CNS1-6.bcmap","./vendor/pdfjs/cmaps/Adobe-CNS1-UCS2.bcmap","./vendor/pdfjs/cmaps/Adobe-GB1-0.bcmap","./vendor/pdfjs/cmaps/Adobe-GB1-1.bcmap","./vendor/pdfjs/cmaps/Adobe-GB1-2.bcmap","./vendor/pdfjs/cmaps/Adobe-GB1-3.bcmap","./vendor/pdfjs/cmaps/Adobe-GB1-4.bcmap","./vendor/pdfjs/cmaps/Adobe-GB1-5.bcmap","./vendor/pdfjs/cmaps/Adobe-GB1-UCS2.bcmap","./vendor/pdfjs/cmaps/Adobe-Japan1-0.bcmap","./vendor/pdfjs/cmaps/Adobe-Japan1-1.bcmap","./vendor/pdfjs/cmaps/Adobe-Japan1-2.bcmap","./vendor/pdfjs/cmaps/Adobe-Japan1-3.bcmap","./vendor/pdfjs/cmaps/Adobe-Japan1-4.bcmap","./vendor/pdfjs/cmaps/Adobe-Japan1-5.bcmap","./vendor/pdfjs/cmaps/Adobe-Japan1-6.bcmap","./vendor/pdfjs/cmaps/Adobe-Japan1-UCS2.bcmap","./vendor/pdfjs/cmaps/Adobe-Korea1-0.bcmap","./vendor/pdfjs/cmaps/Adobe-Korea1-1.bcmap","./vendor/pdfjs/cmaps/Adobe-Korea1-2.bcmap","./vendor/pdfjs/cmaps/Adobe-Korea1-UCS2.bcmap","./vendor/pdfjs/cmaps/B5-H.bcmap","./vendor/pdfjs/cmaps/B5-V.bcmap","./vendor/pdfjs/cmaps/B5pc-H.bcmap","./vendor/pdfjs/cmaps/B5pc-V.bcmap","./vendor/pdfjs/cmaps/CNS-EUC-H.bcmap","./vendor/pdfjs/cmaps/CNS-EUC-V.bcmap","./vendor/pdfjs/cmaps/CNS1-H.bcmap","./vendor/pdfjs/cmaps/CNS1-V.bcmap","./vendor/pdfjs/cmaps/CNS2-H.bcmap","./vendor/pdfjs/cmaps/CNS2-V.bcmap","./vendor/pdfjs/cmaps/ETen-B5-H.bcmap","./vendor/pdfjs/cmaps/ETen-B5-V.bcmap","./vendor/pdfjs/cmaps/ETenms-B5-H.bcmap","./vendor/pdfjs/cmaps/ETenms-B5-V.bcmap","./vendor/pdfjs/cmaps/ETHK-B5-H.bcmap","./vendor/pdfjs/cmaps/ETHK-B5-V.bcmap","./vendor/pdfjs/cmaps/EUC-H.bcmap","./vendor/pdfjs/cmaps/EUC-V.bcmap","./vendor/pdfjs/cmaps/Ext-H.bcmap","./vendor/pdfjs/cmaps/Ext-RKSJ-H.bcmap","./vendor/pdfjs/cmaps/Ext-RKSJ-V.bcmap","./vendor/pdfjs/cmaps/Ext-V.bcmap","./vendor/pdfjs/cmaps/GB-EUC-H.bcmap","./vendor/pdfjs/cmaps/GB-EUC-V.bcmap","./vendor/pdfjs/cmaps/GB-H.bcmap","./vendor/pdfjs/cmaps/GB-V.bcmap","./vendor/pdfjs/cmaps/GBK-EUC-H.bcmap","./vendor/pdfjs/cmaps/GBK-EUC-V.bcmap","./vendor/pdfjs/cmaps/GBK2K-H.bcmap","./vendor/pdfjs/cmaps/GBK2K-V.bcmap","./vendor/pdfjs/cmaps/GBKp-EUC-H.bcmap","./vendor/pdfjs/cmaps/GBKp-EUC-V.bcmap","./vendor/pdfjs/cmaps/GBpc-EUC-H.bcmap","./vendor/pdfjs/cmaps/GBpc-EUC-V.bcmap","./vendor/pdfjs/cmaps/GBT-EUC-H.bcmap","./vendor/pdfjs/cmaps/GBT-EUC-V.bcmap","./vendor/pdfjs/cmaps/GBT-H.bcmap","./vendor/pdfjs/cmaps/GBT-V.bcmap","./vendor/pdfjs/cmaps/GBTpc-EUC-H.bcmap","./vendor/pdfjs/cmaps/GBTpc-EUC-V.bcmap","./vendor/pdfjs/cmaps/H.bcmap","./vendor/pdfjs/cmaps/Hankaku.bcmap","./vendor/pdfjs/cmaps/Hiragana.bcmap","./vendor/pdfjs/cmaps/HKdla-B5-H.bcmap","./vendor/pdfjs/cmaps/HKdla-B5-V.bcmap","./vendor/pdfjs/cmaps/HKdlb-B5-H.bcmap","./vendor/pdfjs/cmaps/HKdlb-B5-V.bcmap","./vendor/pdfjs/cmaps/HKgccs-B5-H.bcmap","./vendor/pdfjs/cmaps/HKgccs-B5-V.bcmap","./vendor/pdfjs/cmaps/HKm314-B5-H.bcmap","./vendor/pdfjs/cmaps/HKm314-B5-V.bcmap","./vendor/pdfjs/cmaps/HKm471-B5-H.bcmap","./vendor/pdfjs/cmaps/HKm471-B5-V.bcmap","./vendor/pdfjs/cmaps/HKscs-B5-H.bcmap","./vendor/pdfjs/cmaps/HKscs-B5-V.bcmap","./vendor/pdfjs/cmaps/Katakana.bcmap","./vendor/pdfjs/cmaps/KSC-EUC-H.bcmap","./vendor/pdfjs/cmaps/KSC-EUC-V.bcmap","./vendor/pdfjs/cmaps/KSC-H.bcmap","./vendor/pdfjs/cmaps/KSC-Johab-H.bcmap","./vendor/pdfjs/cmaps/KSC-Johab-V.bcmap","./vendor/pdfjs/cmaps/KSC-V.bcmap","./vendor/pdfjs/cmaps/KSCms-UHC-H.bcmap","./vendor/pdfjs/cmaps/KSCms-UHC-HW-H.bcmap","./vendor/pdfjs/cmaps/KSCms-UHC-HW-V.bcmap","./vendor/pdfjs/cmaps/KSCms-UHC-V.bcmap","./vendor/pdfjs/cmaps/KSCpc-EUC-H.bcmap","./vendor/pdfjs/cmaps/KSCpc-EUC-V.bcmap","./vendor/pdfjs/cmaps/NWP-H.bcmap","./vendor/pdfjs/cmaps/NWP-V.bcmap","./vendor/pdfjs/cmaps/RKSJ-H.bcmap","./vendor/pdfjs/cmaps/RKSJ-V.bcmap","./vendor/pdfjs/cmaps/Roman.bcmap","./vendor/pdfjs/cmaps/UniCNS-UCS2-H.bcmap","./vendor/pdfjs/cmaps/UniCNS-UCS2-V.bcmap","./vendor/pdfjs/cmaps/UniCNS-UTF16-H.bcmap","./vendor/pdfjs/cmaps/UniCNS-UTF16-V.bcmap","./vendor/pdfjs/cmaps/UniCNS-UTF32-H.bcmap","./vendor/pdfjs/cmaps/UniCNS-UTF32-V.bcmap","./vendor/pdfjs/cmaps/UniCNS-UTF8-H.bcmap","./vendor/pdfjs/cmaps/UniCNS-UTF8-V.bcmap","./vendor/pdfjs/cmaps/UniGB-UCS2-H.bcmap","./vendor/pdfjs/cmaps/UniGB-UCS2-V.bcmap","./vendor/pdfjs/cmaps/UniGB-UTF16-H.bcmap","./vendor/pdfjs/cmaps/UniGB-UTF16-V.bcmap","./vendor/pdfjs/cmaps/UniGB-UTF32-H.bcmap","./vendor/pdfjs/cmaps/UniGB-UTF32-V.bcmap","./vendor/pdfjs/cmaps/UniGB-UTF8-H.bcmap","./vendor/pdfjs/cmaps/UniGB-UTF8-V.bcmap","./vendor/pdfjs/cmaps/UniJIS-UCS2-H.bcmap","./vendor/pdfjs/cmaps/UniJIS-UCS2-HW-H.bcmap","./vendor/pdfjs/cmaps/UniJIS-UCS2-HW-V.bcmap","./vendor/pdfjs/cmaps/UniJIS-UCS2-V.bcmap","./vendor/pdfjs/cmaps/UniJIS-UTF16-H.bcmap","./vendor/pdfjs/cmaps/UniJIS-UTF16-V.bcmap","./vendor/pdfjs/cmaps/UniJIS-UTF32-H.bcmap","./vendor/pdfjs/cmaps/UniJIS-UTF32-V.bcmap","./vendor/pdfjs/cmaps/UniJIS-UTF8-H.bcmap","./vendor/pdfjs/cmaps/UniJIS-UTF8-V.bcmap","./vendor/pdfjs/cmaps/UniJIS2004-UTF16-H.bcmap","./vendor/pdfjs/cmaps/UniJIS2004-UTF16-V.bcmap","./vendor/pdfjs/cmaps/UniJIS2004-UTF32-H.bcmap","./vendor/pdfjs/cmaps/UniJIS2004-UTF32-V.bcmap","./vendor/pdfjs/cmaps/UniJIS2004-UTF8-H.bcmap","./vendor/pdfjs/cmaps/UniJIS2004-UTF8-V.bcmap","./vendor/pdfjs/cmaps/UniJISPro-UCS2-HW-V.bcmap","./vendor/pdfjs/cmaps/UniJISPro-UCS2-V.bcmap","./vendor/pdfjs/cmaps/UniJISPro-UTF8-V.bcmap","./vendor/pdfjs/cmaps/UniJISX0213-UTF32-H.bcmap","./vendor/pdfjs/cmaps/UniJISX0213-UTF32-V.bcmap","./vendor/pdfjs/cmaps/UniJISX02132004-UTF32-H.bcmap","./vendor/pdfjs/cmaps/UniJISX02132004-UTF32-V.bcmap","./vendor/pdfjs/cmaps/UniKS-UCS2-H.bcmap","./vendor/pdfjs/cmaps/UniKS-UCS2-V.bcmap","./vendor/pdfjs/cmaps/UniKS-UTF16-H.bcmap","./vendor/pdfjs/cmaps/UniKS-UTF16-V.bcmap","./vendor/pdfjs/cmaps/UniKS-UTF32-H.bcmap","./vendor/pdfjs/cmaps/UniKS-UTF32-V.bcmap","./vendor/pdfjs/cmaps/UniKS-UTF8-H.bcmap","./vendor/pdfjs/cmaps/UniKS-UTF8-V.bcmap","./vendor/pdfjs/cmaps/V.bcmap","./vendor/pdfjs/cmaps/WP-Symbol.bcmap","./vendor/pdfjs/iccs/CGATS001Compat-v2-micro.icc","./vendor/pdfjs/standard_fonts/FoxitDingbats.pfb","./vendor/pdfjs/standard_fonts/FoxitFixed.pfb","./vendor/pdfjs/standard_fonts/FoxitFixedBold.pfb","./vendor/pdfjs/standard_fonts/FoxitFixedBoldItalic.pfb","./vendor/pdfjs/standard_fonts/FoxitFixedItalic.pfb","./vendor/pdfjs/standard_fonts/FoxitSerif.pfb","./vendor/pdfjs/standard_fonts/FoxitSerifBold.pfb","./vendor/pdfjs/standard_fonts/FoxitSerifBoldItalic.pfb","./vendor/pdfjs/standard_fonts/FoxitSerifItalic.pfb","./vendor/pdfjs/standard_fonts/FoxitSymbol.pfb","./vendor/pdfjs/standard_fonts/LiberationSans-Bold.ttf","./vendor/pdfjs/standard_fonts/LiberationSans-BoldItalic.ttf","./vendor/pdfjs/standard_fonts/LiberationSans-Italic.ttf","./vendor/pdfjs/standard_fonts/LiberationSans-Regular.ttf","./vendor/pdfjs/standard_fonts/LICENSE_FOXIT","./vendor/pdfjs/standard_fonts/LICENSE_LIBERATION","./vendor/pdfjs/wasm/jbig2_nowasm_fallback.js","./vendor/pdfjs/wasm/jbig2.wasm","./vendor/pdfjs/wasm/LICENSE_JBIG2","./vendor/pdfjs/wasm/LICENSE_OPENJPEG","./vendor/pdfjs/wasm/LICENSE_PDFJS_JBIG2","./vendor/pdfjs/wasm/LICENSE_PDFJS_OPENJPEG","./vendor/pdfjs/wasm/LICENSE_PDFJS_QCMS","./vendor/pdfjs/wasm/LICENSE_PDFJS_QUICKJS","./vendor/pdfjs/wasm/LICENSE_QCMS","./vendor/pdfjs/wasm/LICENSE_QUICKJS","./vendor/pdfjs/wasm/openjpeg_nowasm_fallback.js","./vendor/pdfjs/wasm/openjpeg.wasm","./vendor/pdfjs/wasm/qcms_bg.wasm","./vendor/pdfjs/wasm/quickjs-eval.js","./vendor/pdfjs/wasm/quickjs-eval.wasm"];
-self.addEventListener('install',e=>e.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(SHELL.concat(VENDOR));for(const u of['./vendor/dict/wordnet.txt.gz','./vendor/dict/lexicon-extra.txt.gz'])try{await c.add(u)}catch{}})()));
-self.addEventListener('activate',e=>e.waitUntil((async()=>{for(const k of await caches.keys())if(k.startsWith('pagewise-reading-room-')&&k!==CACHE)await caches.delete(k);await self.clients.claim()})()));
-self.addEventListener('message',e=>{if(e.data?.type==='SKIP_WAITING')self.skipWaiting()});
-self.addEventListener('fetch',e=>{const r=e.request;const u=new URL(r.url);if(r.method!=='GET'||u.origin!==self.location.origin)return;const isDoc=r.mode==='navigate'||u.pathname.endsWith('/index.html');e.respondWith((async()=>{const cache=await caches.open(CACHE);const hit=await cache.match(r,{ignoreSearch:isDoc});if(isDoc){const fallback=hit||await cache.match('./index.html')||await cache.match('./');try{const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),fallback?3500:15000);const res=await fetch(r,{signal:ctl.signal});clearTimeout(t);if(res.ok){await cache.put(isDoc?'./index.html':r,res.clone())}return res}catch{return fallback||Response.error()}}if(hit)return hit;try{const res=await fetch(r);if(res.ok)await cache.put(r,res.clone());return res}catch{return Response.error()}})())});
+/* Pagewise service worker · v7.3.7
+   Contract (see handover): cache `pagewise-reading-room-<app version>`; cache-first assets; network-first navigation with a
+   3.5 s timeout and an offline fallback to the cached shell; updates wait for the user (no skipWaiting on install, only on the
+   SKIP_WAITING message); only caches with the Pagewise prefix are ever read or deleted, because other apps can share this origin.
+   Release rule: VERSION must change every release, otherwise the browser sees an identical sw.js and never offers an update. */
+const VERSION='7.3.7';
+const PREFIX='pagewise-reading-room-';
+const CACHE=PREFIX+VERSION;
+const NAV_TIMEOUT=3500;
+
+/* Must all download or install fails and is retried: the shell and the paired PDF.js main + worker. */
+const SHELL=[
+  './','./index.html','./manifest.webmanifest',
+  './icons/icon.svg','./icons/icon-192.png','./icons/icon-512.png',
+  './icons/icon-maskable-192.png','./icons/icon-maskable-512.png','./icons/apple-touch-icon.png',
+  './vendor/pdfjs/pdf.mjs','./vendor/pdfjs/pdf.worker.mjs'
+];
+/* Warmed in the background after install. Failure never fails install; anything missed is cached on first use. */
+const OPTIONAL=[
+  './vendor/pdfjs/iccs/CGATS001Compat-v2-micro.icc',
+  './vendor/pdfjs/standard_fonts/FoxitDingbats.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitFixed.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitFixedBold.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitFixedBoldItalic.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitFixedItalic.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitSerif.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitSerifBold.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitSerifBoldItalic.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitSerifItalic.pfb',
+  './vendor/pdfjs/standard_fonts/FoxitSymbol.pfb',
+  './vendor/pdfjs/standard_fonts/LiberationSans-Bold.ttf',
+  './vendor/pdfjs/standard_fonts/LiberationSans-BoldItalic.ttf',
+  './vendor/pdfjs/standard_fonts/LiberationSans-Italic.ttf',
+  './vendor/pdfjs/standard_fonts/LiberationSans-Regular.ttf',
+  './vendor/pdfjs/wasm/jbig2.wasm',
+  './vendor/pdfjs/wasm/jbig2_nowasm_fallback.js',
+  './vendor/pdfjs/wasm/openjpeg.wasm',
+  './vendor/pdfjs/wasm/openjpeg_nowasm_fallback.js',
+  './vendor/pdfjs/wasm/qcms_bg.wasm',
+  './vendor/pdfjs/wasm/quickjs-eval.js',
+  './vendor/pdfjs/wasm/quickjs-eval.wasm',
+  './vendor/dict/wordnet.txt.gz',
+  './vendor/dict/lexicon-extra.txt.gz'
+];
+
+const fresh=url=>new Request(url,{cache:'reload'});
+
+self.addEventListener('install',event=>{
+  event.waitUntil((async()=>{
+    const cache=await caches.open(CACHE);
+    await Promise.all(SHELL.map(async url=>{const res=await fetch(fresh(url));if(!res.ok)throw new Error(url+' '+res.status);await cache.put(url,res)}));
+    /* non-blocking: not awaited, so a slow dictionary download cannot hold the update back */
+    Promise.allSettled(OPTIONAL.map(async url=>{if(await cache.match(url))return;const res=await fetch(fresh(url));if(res.ok)await cache.put(url,res)}));
+  })());
+});
+
+self.addEventListener('activate',event=>{
+  event.waitUntil((async()=>{
+    for(const name of await caches.keys())if(name.startsWith(PREFIX)&&name!==CACHE)await caches.delete(name);
+    await self.clients.claim();
+  })());
+});
+
+self.addEventListener('message',event=>{if(event.data&&event.data.type==='SKIP_WAITING')self.skipWaiting()});
+
+self.addEventListener('fetch',event=>{
+  const req=event.request;
+  if(req.method!=='GET')return;
+  const url=new URL(req.url);
+  if(url.origin!==self.location.origin||url.pathname.endsWith('/sw.js'))return;
+  event.respondWith(req.mode==='navigate'?navigate(req):asset(req));
+});
+
+async function navigate(req){
+  const cache=await caches.open(CACHE);
+  const net=fetch(req.url,{cache:'no-cache'}).then(res=>{if(res.ok&&!res.redirected)cache.put('./index.html',res.clone());return res});
+  net.catch(()=>{});
+  const late=new Promise(done=>setTimeout(()=>done(null),NAV_TIMEOUT));
+  try{const res=await Promise.race([net,late]);if(res)return res}catch(e){}
+  return (await cache.match('./index.html'))||net;
+}
+
+async function asset(req){
+  const cache=await caches.open(CACHE);
+  const hit=await cache.match(req);
+  if(hit)return hit;
+  const res=await fetch(req);
+  if(res.status===200&&res.type==='basic')cache.put(req,res.clone());
+  return res;
+}
